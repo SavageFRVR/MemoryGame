@@ -1,0 +1,126 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: url(img/bg.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: "chernobyl";
+    src: url("fonts/Chernobyl.otf");
+}
+
+@font-face {
+    font-family: "run";
+    src: url("fonts/run.otf");
+}
+
+section p{
+  font-family: chernobyl;
+  font-size: 24rem;
+  background: rgb(0,0,0);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+  -webkit-background-clip: text; /* Got this from W3 so it would only display the colour on the text*/
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1rem;
+  text-align: center;
+  width: 50%;
+  margin:auto;
+}
+
+.memory-game {
+  
+  width: 75%;
+  height: 640px;
+  margin:5% auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.5);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgba(188,46,37,0.7);
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.topnav {
+  z-index: 1;
+  height: auto;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  font-family: run;
+  letter-spacing: 2px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:5px;
+  text-decoration: none;
+  font-size: 2rem;
+  width: 33.3%;
+}
+
+.topnav a:hover{
+  background-color: #bc2e25;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: green;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(0,0,0,.5);
+   color: white;
+   text-align: center;
