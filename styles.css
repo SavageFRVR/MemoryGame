@@ -25,14 +25,14 @@ body {
 
 section p{
   font-family: chernobyl;
-  font-size: 24rem;
+  font-size: 24vw;
   background: rgb(0,0,0);
   background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
   -webkit-background-clip: text; /* Got this from W3 so it would only display the colour on the text*/
   -webkit-text-fill-color: transparent;
   letter-spacing: 1rem;
   text-align: center;
-  width: 50%;
+  width: 100%;
   margin:auto;
 }
 
@@ -98,7 +98,7 @@ section p{
   text-align: center;
   padding:5px;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.25vw;
   width: 33.3%;
 }
 
